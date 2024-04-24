@@ -1,4 +1,4 @@
-let {testScores, addFiveToScores} = require("./testScoresFilter.js")
+let {testScores, addFiveToScores, squareOfScores} = require("./testScoresFilter.js")
 
 
 test("filter scores greater than 70", () =>{
@@ -14,3 +14,17 @@ test("filter scores greater than 70", () =>{
         expect(result).toEqual([95, 95, 61])
         
         })
+
+        test("squaring scores", () =>{
+            let scores = [2, 4, 6, 8, 10];
+            let result = squareOfScores(scores);
+            expect(result).toEqual([4, 16, 36, 64,100])
+            
+            })
+
+        test("Assign books to users", () =>{
+            let members = ["Emily","Jack", "Sophia","Daniel"];
+            let result = squareOfScores(members);
+            expect(result).toEqual(["Emily"])
+                
+             })

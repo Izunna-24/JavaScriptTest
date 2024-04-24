@@ -11,4 +11,10 @@ function addFiveToScores(scores){
     return newScore;
 }
 
-module.exports = {testScores, addFiveToScores};
+function squareOfScores(scores){
+    let newScore = scores.map((params)=> params*params);
+    return newScore;
+}
+
+
+module.exports = {testScores, addFiveToScores, squareOfScores};
