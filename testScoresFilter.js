@@ -16,17 +16,18 @@ function squareOfScores(scores){
     return newScore;
 }
 
-// function timesTable(time){
-//     return time.filter(params);
-//     return newTime;
-// }
+function timesTable(time){
+    return time.filter(params);
+    return newTime;
+}
 
 
 
     function bookAssigner(members, books) {
         updatedRecord = []
+       
        for(let index = 0; index < books.length; index++) {
-            let givenBooks = {}
+        let givenBooks = {}
           givenBooks.name = members[index];
           givenBooks.book = books[index]
           updatedRecord.push(givenBooks)
