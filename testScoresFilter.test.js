@@ -1,4 +1,4 @@
-let {testScores, addFiveToScores, squareOfScores} = require("./testScoresFilter.js")
+let {testScores, addFiveToScores, squareOfScores,bookAssigner} = require("./testScoresFilter.js")
 
 
 test("filter scores greater than 70", () =>{
@@ -22,9 +22,21 @@ test("filter scores greater than 70", () =>{
             
             })
 
-        test("Assign books to users", () =>{
-            let members = ["Emily","Jack", "Sophia","Daniel"];
-            let result = squareOfScores(members);
-            expect(result).toEqual(["Emily"])
+            test("Assign Books",()=>{
+                let members = ["Emily", "Jack", "Sophia", "Daniel"]
+                let books = ["Koinonia", "Fast and Furious", "man made god", "Interim chef"]
+                let updatedRecord = bookAssigner(members, books);
+                expect(updatedRecord).toEqual([{name: "Emily", book: "Koinonia"}, 
+                                        {name: "Jack", book: "Fast and Furious"}, 
+                                        {name: "Sophia", book: "man made god"}, 
+                                        {name: "Daniel", book: "Interim chef"}]);
+              })
                 
-             })
+             
+
+            //  test("Scheduling classes", () =>{
+            //     let timings = ["9:00 AM","11:00 AM","1:00 PM","3:00 PM","5:00 PM"];
+            //     let result = timesTable(timings);
+            //     expect(result).toEqual(["Emily"])
+                    
+            //      })

@@ -16,5 +16,27 @@ function squareOfScores(scores){
     return newScore;
 }
 
+// function timesTable(time){
+//     return time.filter(params);
+//     return newTime;
+// }
 
-module.exports = {testScores, addFiveToScores, squareOfScores};
+
+
+    function bookAssigner(members, books) {
+        updatedRecord = []
+       for(let index = 0; index < books.length; index++) {
+            let givenBooks = {}
+          givenBooks.name = members[index];
+          givenBooks.book = books[index]
+          updatedRecord.push(givenBooks)
+        }
+        return updatedRecord;
+      }
+
+      
+    
+
+
+
+module.exports = {testScores, addFiveToScores, squareOfScores,bookAssigner};
