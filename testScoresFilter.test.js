@@ -1,4 +1,4 @@
-let {testScores, addFiveToScores, squareOfScores,bookAssigner} = require("./testScoresFilter.js")
+let {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable} = require("./testScoresFilter.js")
 
 
 test("filter scores greater than 70", () =>{
@@ -34,9 +34,9 @@ test("filter scores greater than 70", () =>{
                 
              
 
-            //  test("Scheduling classes", () =>{
-            //     let timings = ["9:00 AM","11:00 AM","1:00 PM","3:00 PM","5:00 PM"];
-            //     let result = timesTable(timings);
-            //     expect(result).toEqual(["Emily"])
+             test("Scheduling classes", () =>{
+                let timings = ["9:00 AM","11:00 AM","1:00 PM","3:00 PM","5:00 PM"];
+                let result = timesTable(timings);
+                expect(result).toEqual(["1:00 PM","3:00 PM", "5:00 PM" ])
                     
-            //      })
+                 })

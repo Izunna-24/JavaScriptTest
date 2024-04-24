@@ -17,8 +17,8 @@ function squareOfScores(scores){
 }
 
 function timesTable(time){
-    return time.filter(params);
-    return newTime;
+    return  time.filter((params)=> params.endsWith("PM"));
+    
 }
 
 
@@ -35,9 +35,19 @@ function timesTable(time){
         return updatedRecord;
       }
 
-      
+    function expenseTracker(david){
+    david= {
+        groceries:150,
+        diningout:100,
+        transportation:50,
+        entertainment:80
+        }
+        for (const key in david){
+            
+            }
+    }
     
 
 
 
-module.exports = {testScores, addFiveToScores, squareOfScores,bookAssigner};
+module.exports = {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable};
