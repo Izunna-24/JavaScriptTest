@@ -1,4 +1,6 @@
-let {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable,expenseTracker} = require("./testScoresFilter.js")
+let {testScores, addFiveToScores, squareOfScores,
+    bookAssigner,timesTable,
+    expenseTracker,mostOccured} = require("./testScoresFilter.js")
 
 
 test("filter scores greater than 70", () =>{
@@ -41,7 +43,7 @@ test("filter scores greater than 70", () =>{
                     
                  })
 
-                 test("track money spent", () =>{
+                 test("track amount of money spent on an object", () =>{
                      david= {
                         "groceries":150,
                         "dining out":100,
@@ -52,3 +54,10 @@ test("filter scores greater than 70", () =>{
                     expect(result).toBe(380)
                         
                      })
+
+                     test("Checking for highest occuring", () =>{
+                        let numbers = [1, 1, 2, 2, 2, 2];
+                        let result = mostOccured(numbers);
+                        expect(result).toEqual([2]);
+                            
+                         })

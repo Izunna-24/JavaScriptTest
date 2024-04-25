@@ -48,8 +48,25 @@ function timesTable(time){
             }
     return amountSpent;
     }
+
+    function mostOccured(numbers) {
+            const counter = new Map();
+            let maxCount = 0;
+            let mostFrequent = [];
+        
+            numbers.forEach(num => {
+                const count = (counter.get(num) || 0) + 1;
+                counter.set(num, count);
+                if (count > maxCount) [maxCount, mostFrequent] = [count, [num]];
+                else if (count === maxCount) mostFrequent.push(num);
+            });
+        
+            return mostFrequent;
+        }
+    
     
 
+    
 
-
-module.exports = {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable,expenseTracker};
+module.exports = {testScores, addFiveToScores, squareOfScores,
+    bookAssigner,timesTable,expenseTracker,mostOccured};
