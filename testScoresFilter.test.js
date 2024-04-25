@@ -1,4 +1,4 @@
-let {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable} = require("./testScoresFilter.js")
+let {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable,expenseTracker} = require("./testScoresFilter.js")
 
 
 test("filter scores greater than 70", () =>{
@@ -40,3 +40,15 @@ test("filter scores greater than 70", () =>{
                 expect(result).toEqual(["1:00 PM","3:00 PM", "5:00 PM" ])
                     
                  })
+
+                 test("track money spent", () =>{
+                     david= {
+                        "groceries":150,
+                        "dining out":100,
+                        "transportation":50,
+                        "entertainment":80
+                        }
+                    let result = expenseTracker(david);
+                    expect(result).toBe(380)
+                        
+                     })

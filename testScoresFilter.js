@@ -36,18 +36,20 @@ function timesTable(time){
       }
 
     function expenseTracker(david){
+        let amountSpent = 0;
     david= {
-        groceries:150,
-        diningout:100,
-        transportation:50,
-        entertainment:80
+        "groceries":150,
+        "dining out":100,
+        "transportation":50,
+        "entertainment":80
         }
         for (const key in david){
-            
+            amountSpent +=  david[key];
             }
+    return amountSpent;
     }
     
 
 
 
-module.exports = {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable};
+module.exports = {testScores, addFiveToScores, squareOfScores,bookAssigner,timesTable,expenseTracker};
